@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/ST.unity
+  isLoaded: 1
+  isActive: 1
