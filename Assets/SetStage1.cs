@@ -46,7 +46,7 @@ public class SetStage1 : MonoBehaviour {
             parent[0].GetComponent<GridLayoutGroup>().cellSize = new Vector2(12.5f, 12.5f);
             parent[0].GetComponent<GridLayoutGroup>().constraintCount = 8;
         }
-        else if (MaxBox.text == "99")
+        else if (MaxBox.text == "81")
         {
             parent[0].GetComponent<GridLayoutGroup>().cellSize = new Vector2(11.1f, 11.1f);
             parent[0].GetComponent<GridLayoutGroup>().constraintCount = 9;
