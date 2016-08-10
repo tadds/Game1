@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Score2 : MonoBehaviour {
     Text Level;
     public Text Score;
+    public GameObject Lost;
     // Use this for initialization
     void Start()
     {
@@ -21,8 +22,9 @@ public class Score2 : MonoBehaviour {
 
     public void ONClick()
     {
-        Application.LoadLevel("game2");
+        Lost.SetActive(false);
         Level.text = "1";
-        // Lost.SetActive(false);
+        LostTime.Couter= 61;
+        RemoveBox.Destory();
     }
 }

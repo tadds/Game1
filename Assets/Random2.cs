@@ -7,10 +7,11 @@ public class Random2 : MonoBehaviour {
     public Text ColorTrue;
     public Text MaxBox;
     public GameObject Stage;
+    public GameObject ST;
 
-    int random;
+    static public int random;
     // Use this for initialization
-    void Start()
+   /* static public void Randomnumber()
     {
 
         Text Level = UnityEngine.GameObject.Find("Level").GetComponent<Text>();
@@ -71,15 +72,17 @@ public class Random2 : MonoBehaviour {
             MaxBox.text = "100";
             
         }
-        TestCeateObject sc = Stage.AddComponent<TestCeateObject>() as TestCeateObject;
-        SetStage1 sc1 = Stage.AddComponent<SetStage1>() as SetStage1;
+        Stage.AddComponent<TestCeateObject>();
+        Stage.AddComponent<SetStage1>() ;
+        ColorTrue.text = random.ToString();
+        ST.SetActive(false);
     }
-
+    */
 
 
 
     // Update is called once per frame
-    void Update()
+   void Update()
     {
         ColorTrue.text = random.ToString();
     }

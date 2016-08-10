@@ -30,13 +30,14 @@ public class ClickCheck2 : MonoBehaviour {
         if (GetComponent<Image>().color.a == float.Parse(AColorTrue.text))
         {
             Debug.Log("win");
-            Application.LoadLevel("game2");
+            RemoveBox.Destory();
             Level.text = nextLevel.ToString();
         }
         else
         {
+            /*
             Debug.Log("lost");
-            Lost.SetActive(true);
+            Lost.SetActive(true);*/
         }
     }
 }

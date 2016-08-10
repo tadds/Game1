@@ -4,38 +4,31 @@ using System.Collections;
 
 public class TestCeateObject : MonoBehaviour {
 
-    public GameObject[] original ;
+    public GameObject original ;
     public GameObject[] parent ;
     Text MaxBox;
 
     void Start()
 
     {
-        original = GameObject.FindGameObjectsWithTag("Box");
+        original = UnityEngine.GameObject.Find("1");
         parent = GameObject.FindGameObjectsWithTag("parent");
         MaxBox = UnityEngine.GameObject.Find("MaxBox").GetComponent<Text>();
         
 
-        for (int i= 0; i< int.Parse(MaxBox.text)-1; i++)
+        for (int i= 0; i< int.Parse(MaxBox.text); i++)
         {
             
-            GameObject initialTransformGO = Instantiate(original[0]) as GameObject;
+            GameObject initialTransformGO = Instantiate(original) as GameObject;
             initialTransformGO.transform.parent = parent[0].transform;
+            initialTransformGO.tag = "Box";
         }
 
 
-        RandomColor2 sc = parent[0].AddComponent<RandomColor2>() as RandomColor2;
+         parent[0].AddComponent<RandomColor>() ;
 
     }
 
-    // Update is called once per frame
-    void Update () {
-	
-	}
-
-    void CeateObject ()
-    {
-
-    }
+  
 
 }

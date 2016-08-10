@@ -4,7 +4,7 @@ using System;
 using UnityEngine.UI;
 
 public class RandomColor : MonoBehaviour {
-    public Image[] Box;
+    public GameObject[] Box;
     public Text ColorTrue;
     public Text MaxBox;
     public Text AColorTrue;
@@ -15,7 +15,11 @@ public class RandomColor : MonoBehaviour {
     Color c;
     // Use this for initialization
     void Start () {
-           
+        Box = GameObject.FindGameObjectsWithTag("Box");
+        MaxBox = UnityEngine.GameObject.Find("MaxBox").GetComponent<Text>();
+        AColorTrue = UnityEngine.GameObject.Find("AColorTrue").GetComponent<Text>();
+        ColorTrue = UnityEngine.GameObject.Find("ColorTrue").GetComponent<Text>();
+
         a = new Color(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value, 1f);
         
         
@@ -35,11 +39,11 @@ public class RandomColor : MonoBehaviour {
         {
             if (Int32.Parse(ColorTrue.text) == i + 1)
             {
-                Box[i].color = c;
+                Box[i].GetComponent<Image>().color = c;
             }
             else
             {
-                Box[i].color = a;
+                Box[i].GetComponent<Image>().color = a;
             }
         }
     }
